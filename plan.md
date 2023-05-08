@@ -6,27 +6,88 @@
   <!-- TODO: A priori o objetivo irá mudar a partir de novas iterações, mas usando Polo como iteração 0 irá evitar algumas dores de cabeça. -->
   * Apogeu: 3km
   * Impulso total: 12kNs
+  * Prazo final: Lasc 2025
 
 ## Etapas
 
-    1. Projeto
-    1. Fabricação
-    1. Testes
-    1. Integração
-    1. Lançamento
+Cada etapa deverá ser documentada em um relatório técnico.
+
+  1. Projeto
+(Uma a duas pesquisas científicas por componente a ser desenvolvido)
+      1. Pesquisa
+      1. Desenvolvimento
+  1. Fabricação
+  1. Testes
+  1. Integração
+  1. Lançamento
+
+  As etapas 1, 2 e 3 São iterativas, de modo que novas iterações podem ser necessárias para atingir os objetivos, onde a etapa deve ser alcançada apenas quando os resultados das 3 etapas anteriores satisfazerem os criterios etabelecidos.
 
 ## Componentes a serem desenvolvidos
 
   * Motor
   ![](images/Hybrids_big-tosvg.svg)
-    * Injeção
-    * Combustível
+    * Injetor **
+    * Combustível e Oxidante
     * Câmara de combustão
+    * Tanque de Oxidante
     * Tubeira
-    * Ignição
+    * Ignitor **
+    * Válvula **
   * Eletrônica
+    * Controle de vazão **
+    * Acionamento do ignitor **
+    * A definir 
+    <!-- TODO: Falar com pessoal do departamento -->
   * Estrutura
+    * A definir 
+    <!-- TODO: Falar com pessoal do departamento -->
   * Recuperação
+    * A definir 
+    <!-- TODO: Falar com pessoal do departamento -->
+** Componentes que merecem mais destaque por serem completamente novos para o grupo
+
+## Calendario Genetico
+
+1. Pesquisa
+
+Reunir material sobre estado da arte do componente estudado, casos de sucesso, embasamento teórico, etc. "Buscar o melhor do mercado, entender e melhorar"
+
+2. Design 
+
+Desenvolver o modelo, cad e desenhos do componente a ser desenvolvido.
+
+3. Manual de fabricação
+
+Desenvolver um manual pratico de confecção do componente, com os materiais necessários, ferramentas, procedimentos, etc.
+
+4. Prototipagem
+
+Desenvolver um protótipo do componente, seguindo o manual de fabricação.
+
+5. Testes
+
+Realizar os testes necessários para validar se o protótipo corresponde a teoria e ao modelo projetado. Caso não corresponda, voltar para a etapa 1.
+
+6. Confecção da versão final
+
+Confeccionar a versão final do componente, seguindo o manual de fabricação apos validação bem sucedida dos protoótipos.
+
+7. Teste de validação
+
+Realizar os testes necessários para validar se a versão final corresponde a teoria e ao modelo projetado. Caso não corresponda, verificar qual incoerência em relação aos testes anteriores e corrigir. Caso não seja possível corrigir, voltar para a etapa 1.
+
+8. Manual de integração
+
+Desenvolver um manual pratico de integração do componente ao foguete, com os materiais necessários, ferramentas, procedimentos, etc.
+
+9. Integração
+
+Integrar o componente ao foguete, seguindo o manual de integração.
+
+10. Lançamento
+
+Alons-y! Allonso!
 
 <!-- desemvolver um sistema de injeção de oxido nitroso ou oxigenio liquido na vazão correta, fabricar e caracterizar os injetores e tentar fazer a caracterização dos injetores
 para parte solida: bocal (tubeira), seção cilindrica, tatamento termico pra motor de alta pressão, e tipo de combustivel solido com adição de aluminio ou algo pra aumentar o empuxo especifico
