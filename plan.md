@@ -2,8 +2,9 @@
 
 ## Objetivo
 
-  Alcançar objetivos do Polo usando propulsão híbrida. 
-  <!-- TODO: A priori o objetivo irá mudar a partir de novas iterações, mas usando Polo como iteração 0 irá evitar algumas dores de cabeça. -->
+  Alcançar objetivos do Polo usando propulsão híbrida.
+
+  Observação: A priori o objetivo irá mudar a partir de novas iterações, mas usando Polo como iteração 0 irá evitar algumas dores de cabeça.
   * Apogeu: 3km
   * Impulso total: 12kNs
   * Prazo final: Lasc 2025
