@@ -74,25 +74,25 @@ Usando Technology Readiness Level iremos acompanhar o desenvolvimento do projeto
 
 São as iterações de pesquisas, requisito e determinação dos modelos a serem construido.
 
-  1. Basic principles observed and reported
-  2. Technology concept and/or application formulated
-  3. Analytical and experimental critical function and/or characteristic proof-of-concept
+  1. Basic principles observed and reported (1 mês)
+  2. Technology concept and/or application formulated (2 meses)
+  3. Analytical and experimental critical function and/or characteristic proof-of-concept (3 meses)
 
 * Design e prototipagem :
 
 Implementar os prototipos de cada componente em escala reduzida.
 
-  4. Component and/or breadboard validation in a laboratory environment
-  5. Component and/or breadboard validation in relevant environment
-  6. System/subsystem model or prototype demonstration in a relevant environment (ground or space)
+  4. Component and/or breadboard validation in a laboratory environment (4 meses)
+  5. Component and/or breadboard validation in relevant environment (4 meses)
+  6. System/subsystem model or prototype demonstration in a relevant environment (ground or space) (4 meses)
 
 * Integração e implementação em escala :
 
 Integração dos componentes, teste em escala real e lançamento.
 
-  7. System prototype demonstration in a space environment
-  8. Actual system completed and "flight qualified" through test and demonstration (ground or space)
-  9. Actual system "flight proven" through successful mission operations
+  7. System prototype demonstration in a space environment (2 meses)
+  8. Actual system completed and "flight qualified" through test and demonstration (ground or space) (2 meses)
+  9. Actual system "flight proven" through successful mission operations (1 mes)
 
 ## Componentes a serem desenvolvidos
 
@@ -126,6 +126,7 @@ Integração dos componentes, teste em escala real e lançamento.
 ## Revisões de projeto
 
 <!-- TODO: Revisar em cima de https://en.wikipedia.org/wiki/Design_review_(U.S._government) -->
+As revisões de projeto irão acompanhar o desenvolvimento do mesmo, e ajudarão a indentificar e acompanhar os passos de cada componente e do projeto como um todo. Embora exista uma ordem logica por trás das etapas a seguir é possivel que algumas precisem ser reavaliadas para adequar a demandas do projeto.
 
 ### Mission Concept Review
 
@@ -153,11 +154,11 @@ Examinar o design final de cada componente, e como eles atendem aos requisitos m
 
 ### Production Readiness Review
 
-Examinar como será feita a produção e confecção dos componentes e sua integração.
+Examinar processo de produção e confecção dos componentes e sua integração.
 
 ### Test Readiness Review
 
-Examinar como será feito os testes de cada componente e do sistema integrado.
+Examinar estado dos testes de cada componente e do sistema integrado.
 
 ### System Acceptance Review
 
