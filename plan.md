@@ -56,7 +56,6 @@ Cada componente contara com etapas de prototipagem e desenvolvimento em escala m
 #### Payload
 
 * LASC
-
   * Dimensões: 10cm x 10cm x 30cm, baseado nas dimensões de 3 cubesats.
   * "4,000 grams of payload for 3,000 meters AGL apogee."
   * "If a functional payload is chosen, with the functional part itself not providing enough mass to reach the minimum requirements, additional dummy-masses may be added to the functional payload until the minimum mass requirement is reached."
@@ -94,32 +93,111 @@ Integração dos componentes, teste em escala real e lançamento.
   8. Actual system completed and "flight qualified" through test and demonstration (ground or space) (2 meses)
   9. Actual system "flight proven" through successful mission operations (1 mes)
 
-## Componentes a serem desenvolvidos
+## Work breakdown structure
+<!-- Utilizando https://en.wikipedia.org/wiki/Work_breakdown_structure decompor os componentes a serem desenvolvidos, e tambem as etapas/atividades/eventos a serem realizadas, como integrações e afins 
+TODO?: Implementar regra dos 100%
+-->
+```mermaid
+graph TD;
 
-* Motor
+  Missão --> Foguete;
+    Foguete --> Motor;
+      Motor --> Injetor;
+      Motor --> Propelente;
+        Propelente --> Combustível;
+        Propelente --> Oxidante;
+      Motor --> combustionChamber[Câmara de combustão];
+      Motor --> oxidizerTank[Tanque de Oxidante];
+      Motor --> Tubeira;
+      Motor --> Ignitor;
+      Motor --> Válvula;
+    Foguete --> Eletrônica;
+      Eletrônica --> flowControl[Controle de vazão];
+      Eletrônica --> ignitorAction[Acionamento do ignitor];
+      Eletrônica --> Telemetria;
+      Eletrônica --> chuteAction[Acionamento do paraquedas];
+    Foguete --> Recuperação;
+      Recuperação --> drogueChute[Paraquedas Drogue];
+      Recuperação --> mainChute[Paraquedas Principal];
+    Foguete --> Estrutura;
+      Estrutura --> Coifa;
+      Estrutura --> fixPayload[Anteparo de fixação da Payload];
+      Estrutura --> bulkheadPayload[bulkhead entre Carga Paga e Recuperação principal];
+      Estrutura --> couplerPayload[Coupler entre Coifa, Carga Paga e Recuperação principal];
+      Estrutura --> fuselagePayload[Fuselagem da Payload];
+      Estrutura --> chuteCrown[Coroa de cisalhamento da Recuperação principal];
+      Estrutura --> eletronicsPlate[Placa de suporte da Eletrônica];
+      Estrutura --> bulkheadEletronics[Bulkheads entre Eletrônica e as câmaras de recuperação];
+      Estrutura --> drogueCrown[Coroa de cisalhamento da Recuperação piloto];
+      Estrutura --> fuselageRecovery[Fuselagem das câmaras de recuperação e eletrônica];
+      Estrutura --> bulkheadRecovery[Bulkhead entre Recuperação piloto e o Motor];
+      Estrutura --> couplerRecovery[Coupler entre Recuperação piloto e o Motor];
+      Estrutura --> fuselageMotor[Fuselagem do Motor];
+      Estrutura --> fins[Conjunto de Empenas];
+      Estrutura --> finsRings[Conjunto de anéis de fixação das empenas];
+      Estrutura --> boatTail[Boat Tail];
+    Foguete --> Integração;
+  Missão --> Payload;
+  Missão --> Logística;
+    Logística --> Testes;
+    Logística --> Lançamento;
+  Missão --> Financiamento;
+
+```
+
+* \[Elemento\]
+  * \[Documentação\]
+  * \[Prototipo\]
+  * \[Implementação\]
+  <!-- * Requisitos -->
+
+1. Motor
   ![Esquematico basico do motor hibrido](images/Hybrids_big-tosvg.svg)
-  * Injetor **
-  * Propelente, (Combustível e Oxidante)
-  * Câmara de combustão
-  * Tanque de Oxidante
-  * Tubeira
-  * Ignitor **
-  * Válvula **
-* Eletrônica
-  * Controle de vazão **
-  * Acionamento do ignitor **
-  * A definir
+    1. Injetor **
+    1. Propelente, (Combustível e Oxidante)
+    1. Câmara de combustão
+    1. Tanque de Oxidante
+    1. Tubeira
+    1. Ignitor **
+    1. Válvula **
+    1. Teste estático
+1. Eletrônica
+    1. Controle de vazão **
+    1. Acionamento do ignitor **
+    1. A definir
     <!-- TODO: Falar com pessoal do departamento -->
-* Estrutura
-  * A definir
-    <!-- TODO: Falar com pessoal do departamento -->
-* Recuperação
-  * Paraquedas Principal
-  * Paraquedas Drogue
-  * A definir
-    <!-- TODO: Falar com pessoal do departamento -->
-* Carga paga
-  * A definir
+1. Estrutura
+    <!-- TODO: Revisar aqui ver o que pode ser agrupado -->
+    1. Coifa
+    1. Anteparo de fixação da Payload
+    1. Bulkhead entre Carga Paga e Recuperação principal
+    1. Coupler entre Coifa, Carga Paga e Recuperação principal
+    1. Fuselagem da Payload
+    1. Coroa de cisalhamento da Recuperação principal
+    1. Placa de suporte da Eletrônica
+    1. Bulkheads entre Eletrônica e as câmaras de recuperação
+    1. Coroa de cisalhamento da Recuperação piloto
+    1. Fuselagem das câmaras de recuperação e eletrônica
+    1. Bulkhead entre Recuperação piloto e o Motor
+    1. Coupler entre Recuperação piloto e o Motor
+    1. Fuselagem do Motor
+    1. Conjunto de Empenas
+    1. Conjunto de anéis de fixação das empenas
+    1. Boat Tail
+1. Recuperação
+    1. Paraquedas Principal
+    1. Paraquedas Drogue
+    1. Carga explosiva
+    1. Sistema de cisalhamento
+        1. Coroa de cisalhamento
+1. Integração
+    1. Payload
+    1. Eletrônica
+    1. Recuperação
+    1. Motor
+1. Gerenciamento de Projeto
+1. Carga paga
+    1. A definir
 
 ** Componentes que merecem mais destaque por serem completamente novos para o grupo
 
@@ -171,7 +249,6 @@ Examina se o sistema, logistica e equipe estão prontos para o lançamento.
 ### Flight Readiness Review
 
 Determinar se o foguete está pronto para o lançamento.
-
 
 <!-- 1. Pesquisa e levantamento teórico
 
@@ -284,4 +361,10 @@ Olexiy Shynkarenko
 2015 (1)
 PRELIMINARY RESEARCH OF GAS TORCH IGNITION SYSTEM FOR THE HYBRID ROCKET MOTOR
 2014 (1)
-Preliminary Research of the Hybrid Motor Properties for the Reentry Plat -->
+Preliminary Research of the Hybrid Motor Properties for the Reentry Plat 
+
+Autor
+revisão
+aprovar
+
+-->
