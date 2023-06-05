@@ -98,7 +98,8 @@ Integração dos componentes, teste em escala real e lançamento.
 TODO?: Implementar regra dos 100%
 -->
 ```mermaid
-graph TD;
+%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
+flowchart TD;
 
   Missão --> Foguete;
     Foguete --> Motor;
