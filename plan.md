@@ -69,6 +69,8 @@ Cada etapa deverá ser documentada em um relatório técnico. É estritamente re
 
 Usando Technology Readiness Level iremos acompanhar o desenvolvimento do projeto.
 
+As etapas 1 ao 6 poderão ser desenvolvidas em modelo Iniciação Científica, com acompanhamento de um professor orientador e de acordo com editais de bolsa, tendo como principais vantagens, participação de professores na orientação do projeto, e maior comprometimento por parte dos membros da equipe.
+
 * Pesquisa e modelagem :
 
 São as iterações de pesquisas, requisito e determinação dos modelos a serem construido.
@@ -146,14 +148,65 @@ flowchart TD;
 
 ```
 
+Same as above, but mindmap style
+
+```mermaid
+mindmap
+  Missão
+    Foguete
+      Motor
+        Injetor
+        Propelente
+          Combustível
+          Oxidante
+        combustionChamber[Câmara de combustão]
+        oxidizerTank[Tanque de Oxidante]
+        Tubeira
+        Ignitor
+        Válvula
+      Eletrônica
+        flowControl[Controle de vazão]
+        ignitorAction[Acionamento do ignitor]
+        Telemetria
+        chuteAction[Acionamento do paraquedas]
+      Recuperação
+        drogueChute[Paraquedas Drogue]
+        mainChute[Paraquedas Principal]
+      Estrutura
+        Coifa
+        fixPayload[Anteparo de fixação da Payload]
+        bulkheadPayload[bulkhead entre Carga Paga e Recuperação principal]
+        couplerPayload[Coupler entre Coifa, Carga Paga e Recuperação principal]
+        fuselagePayload[Fuselagem da Payload]
+        chuteCrown[Coroa de cisalhamento da Recuperação principal]
+        eletronicsPlate[Placa de suporte da Eletrônica]
+        bulkheadEletronics[Bulkheads entre Eletrônica e as câmaras de recuperação]
+        drogueCrown[Coroa de cisalhamento da Recuperação piloto]
+        fuselageRecovery[Fuselagem das câmaras de recuperação e eletrônica]
+        bulkheadRecovery[Bulkhead entre Recuperação piloto e o Motor]
+        couplerRecovery[Coupler entre Recuperação piloto e o Motor]
+        fuselageMotor[Fuselagem do Motor]
+        fins[Conjunto de Empenas]
+        finsRings[Conjunto de anéis de fixação das empenas]
+        boatTail[Boat Tail]
+      Integração
+    Payload
+    Logística
+      Testes
+      Lançamento
+    Financiamento
+
+```
+
+
 * \[Elemento\]
   * \[Documentação\]
   * \[Prototipo\]
   * \[Implementação\]
   <!-- * Requisitos -->
 
+<!-- ![Esquematico basico do motor hibrido](images/Hybrids_big-tosvg.svg) -->
 1. Motor
-  ![Esquematico basico do motor hibrido](images/Hybrids_big-tosvg.svg)
     1. Injetor **
     1. Propelente, (Combustível e Oxidante)
     1. Câmara de combustão
