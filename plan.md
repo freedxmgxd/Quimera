@@ -105,18 +105,18 @@ flowchart TD;
 
   Missão --> Foguete;
     Foguete --> Motor;
-      Motor --> Injetor;
-      Motor --> Propelente;
-        Propelente --> Combustível;
-        Propelente --> Oxidante;
+      Motor --> injetor[Injetor*];
+      Motor --> propelente[Propelente*];
+        propelente --> Combustível;
+        propelente --> Oxidante;
       Motor --> combustionChamber[Câmara de combustão];
       Motor --> oxidizerTank[Tanque de Oxidante];
       Motor --> Tubeira;
-      Motor --> Ignitor;
-      Motor --> Válvula;
+      Motor --> ignitor[Ignitor*];
+      Motor --> valvula[Válvula*];
     Foguete --> Eletrônica;
-      Eletrônica --> flowControl[Controle de vazão];
-      Eletrônica --> ignitorAction[Acionamento do ignitor];
+      Eletrônica --> flowControl[Controle de vazão*];
+      Eletrônica --> ignitorAction[Acionamento do ignitor*];
       Eletrônica --> Telemetria;
       Eletrônica --> chuteAction[Acionamento do paraquedas];
     Foguete --> Recuperação;
@@ -145,68 +145,27 @@ flowchart TD;
     Logística --> Testes;
     Logística --> Lançamento;
   Missão --> Financiamento;
+    Financiamento --> Patrocínio;
+    Financiamento --> store["`Lojinha da Rocket`"];
 
 ```
 
-Same as above, but mindmap style
-
-```mermaid
-mindmap
-  Missão
-    Foguete
-      Motor
-        Injetor
-        Propelente
-          Combustível
-          Oxidante
-        combustionChamber[Câmara de combustão]
-        oxidizerTank[Tanque de Oxidante]
-        Tubeira
-        Ignitor
-        Válvula
-      Eletrônica
-        flowControl[Controle de vazão]
-        ignitorAction[Acionamento do ignitor]
-        Telemetria
-        chuteAction[Acionamento do paraquedas]
-      Recuperação
-        drogueChute[Paraquedas Drogue]
-        mainChute[Paraquedas Principal]
-      Estrutura
-        Coifa
-        fixPayload[Anteparo de fixação da Payload]
-        bulkheadPayload[bulkhead entre Carga Paga e Recuperação principal]
-        couplerPayload[Coupler entre Coifa, Carga Paga e Recuperação principal]
-        fuselagePayload[Fuselagem da Payload]
-        chuteCrown[Coroa de cisalhamento da Recuperação principal]
-        eletronicsPlate[Placa de suporte da Eletrônica]
-        bulkheadEletronics[Bulkheads entre Eletrônica e as câmaras de recuperação]
-        drogueCrown[Coroa de cisalhamento da Recuperação piloto]
-        fuselageRecovery[Fuselagem das câmaras de recuperação e eletrônica]
-        bulkheadRecovery[Bulkhead entre Recuperação piloto e o Motor]
-        couplerRecovery[Coupler entre Recuperação piloto e o Motor]
-        fuselageMotor[Fuselagem do Motor]
-        fins[Conjunto de Empenas]
-        finsRings[Conjunto de anéis de fixação das empenas]
-        boatTail[Boat Tail]
-      Integração
-    Payload
-    Logística
-      Testes
-      Lançamento
-    Financiamento
-
-```
-
+Os reponsáveis por cada elemento/nó devem manter as issues atualizadas, e monitorar as issues dos elementos/nós que dependem do seu elemento/nó. Sendo que a manutenção e atualização do repositório fundamental para o sucesso do projeto. Para estruturação de cada elemento será utilizado o seguinte modelo:
 
 * \[Elemento\]
   * \[Documentação\]
+    * Introdução
+    * Modelagem teórica
+      * Modelagem matemática/algoritmica (conceitual)
+      * Simulação
+        * Manual de Simulação
+    * Manual de montagem
   * \[Prototipo\]
   * \[Implementação\]
   <!-- * Requisitos -->
 
 <!-- ![Esquematico basico do motor hibrido](images/Hybrids_big-tosvg.svg) -->
-1. Motor
+<!-- 1. Motor
     1. Injetor **
     1. Propelente, (Combustível e Oxidante)
     1. Câmara de combustão
@@ -219,9 +178,9 @@ mindmap
     1. Controle de vazão **
     1. Acionamento do ignitor **
     1. A definir
-    <!-- TODO: Falar com pessoal do departamento -->
+    TODO: Falar com pessoal do departamento 
 1. Estrutura
-    <!-- TODO: Revisar aqui ver o que pode ser agrupado -->
+     TODO: Revisar aqui ver o que pode ser agrupado 
     1. Coifa
     1. Anteparo de fixação da Payload
     1. Bulkhead entre Carga Paga e Recuperação principal
@@ -251,14 +210,16 @@ mindmap
     1. Motor
 1. Gerenciamento de Projeto
 1. Carga paga
-    1. A definir
+    1. A definir -->
 
-** Componentes que merecem mais destaque por serem completamente novos para o grupo
+* Componentes que merecem mais destaque por serem completamente novos para o grupo
 
 ## Revisões de projeto
 
 <!-- TODO: Revisar em cima de https://en.wikipedia.org/wiki/Design_review_(U.S._government) -->
 As revisões de projeto irão acompanhar o desenvolvimento do mesmo, e ajudarão a indentificar e acompanhar os passos de cada componente e do projeto como um todo. Embora exista uma ordem logica por trás das etapas a seguir é possivel que algumas precisem ser reavaliadas para adequar a demandas do projeto.
+
+As reuniões serão periodicas e terão como objetivo avaliar o progresso do projeto a partir de cada revisão, sendo iteracional e incremental. Ou seja, cada reunião terá como tema definido um dos pontos de revisão abaixo. As datas seguirão calendario e cronograma do projeto, sendo que sem exceções a reunião seguinte deve ser confirmada na reunião anterior.
 
 ### Mission Concept Review
 
@@ -421,4 +382,5 @@ Autor
 revisão
 aprovar
 
+TODO: Definir cargos e responsabilidades.
 -->
